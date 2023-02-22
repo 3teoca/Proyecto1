@@ -46,8 +46,7 @@ div {
 
 footer i{
     color: #03264C;
-    width: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 footer h3{
@@ -62,6 +61,7 @@ footer p{
 footer{
     margin-top: 30px;
     text-align: center;
+    
 }
 
 section{
@@ -91,6 +91,10 @@ section i {
     right: -25vw;
     top: -15px;
     color: var(--verde);
+    transition-duration: 700ms
+}
+section i:hover {
+    transform: rotateZ(-90deg)
 }
 section i:hover{
     transform: rotateZ(90 deg);
@@ -125,7 +129,7 @@ li {
 .banner {
     width: 100%;
 }
-body article{
+section article{
     display: flex;
     justify-content: flex-start;
 }
@@ -169,10 +173,13 @@ form input {
     
 }
 #ingreso {
-    color: var(--grisclaro);
-    background-color: var(--celeste);
+    background-color: var(--amarillo);
     height: 7vh;
     border-radius: 9px;
+}
+#ingreso:hover{
+    background-color: #0022AA;
+    color:var(--grisclaro)
 }
 #nacimiento{
     margin-top: 0px;
@@ -192,17 +199,20 @@ form input {
 }
 
 
-
 @media (min-width: 361px){
-    .descripcion {
-        display: block;    
+    .descripcion{
+        display: block;          
         margin-left: 3vw;
     }
+    
     .precio{
         margin-left: 3vw;        
         }
     section{  
         width: 95%;
+        transition-duration: 0.5s        
+    }
+    section:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .barra {
@@ -246,13 +256,10 @@ form input {
         font-size: 15px;
     }
     
-    .descripcion {
-        display: block;
-    }
     .barra {
         display: block;
         display: flex;
-        }
+    }
     .barra-secundaria{
         display: block;
         display: flex;
@@ -262,8 +269,11 @@ form input {
         display: flex;
         justify-content: space-between;
     }
+    section{
+        width: 95%;
+        transition-duration: 0.5s
+    }
     section:hover{
-        width: 95%;  
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .burger-menu {
@@ -274,24 +284,26 @@ form input {
     }
     div section { 
         width:22%
-
     }
     .descripcion {
         margin-left: 1vw;
+        display: block;
+        color: white
+    }
+    .descripcion:hover{
+        color:black     
+        
     }
     .precio{
         margin-left: 1vw;        
         }
-
     .titulares {        
         margin: 2% 30%;
-        
     }
     section i {
-        
         right: -7vw;
-        
     }
+
     #logo {
         width:30%
     }
@@ -303,6 +315,16 @@ form input {
         font-size: 14px;
         right: 2vw;
         top: 3vw;
+    }
+    footer article{
+        display: flex;
+        display:inline-block;
+        width:31%;
+        background-color:--grisclaro        
+    }
+    footer i:hover{
+        color: #39b54a;
+        font-size: 2rem;
     }
     
 }
