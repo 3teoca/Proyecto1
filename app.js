@@ -17,4 +17,7 @@ app.get('/registro.html', function(req,res) {
     })
 
 
-app.listen(3000, ()=> console.log("Funcionando en el puerto 3000"))
+/* app.listen(3000, ()=> console.log("Funcionando en el puerto 3000")) */
+
+const port = process.env.PORT || 3000;
+app.listen(port,()=> console.log("Funcionando en el puerto ${port}"));
